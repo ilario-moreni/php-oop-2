@@ -15,6 +15,7 @@ class Food extends Product{
         if ($this->isBio){
             $message = 'Bio food';
         }
+        return $message;
     }
 
 
