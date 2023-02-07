@@ -37,7 +37,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Prezzo: <?php echo $product->cost ?>&euro;</li>
                         <li class="list-group-item">Gusto: <?php echo $product->flavor_type ?></li>
-                        <li class="list-group-item">Categoria: <?php echo $product->animal ?></li>
+                        <li class="list-group-item">Categoria: <?php echo $product->category->animal ?></li>
                     </ul>
                     <div class="p-2">
                         <?php
