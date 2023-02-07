@@ -13,6 +13,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
@@ -38,7 +41,8 @@
                     </ul>
                     <div class="p-2">
                         <?php
-                            echo $product->animal;
+                            echo $product->category->icon.' ';
+                            echo $product->category->animal;
                             echo ' '.$product->getMessageBio();
                             
                             ?>
@@ -57,14 +61,15 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Prezzo: <?php echo $product->cost ?>&euro; -
-                            <?php echo $product->setAssurance($product->animal == 'gatti' || $product->animal == 'cani' ? true : false);
+                            <?php echo $product->setAssurance($product->category->animal == 'gatti' || $product->category->animal == 'cani' ? true : false);
                              echo ' '.$product->getAssurance(); ?></li>
                         <li class="list-group-item">Materiale: <?php echo $product->material ?></li>
-                        <li class="list-group-item">Categoria: <?php echo $product->animal ?></li>
+                        <li class="list-group-item">Categoria: <?php echo $product->category->animal ?></li>
                     </ul>
                     <div class="p-2">
                         <?php
-                            echo $product->animal;
+                            echo $product->category->icon.' ';
+                            echo $product->category->animal;
                             
                             
                             

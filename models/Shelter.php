@@ -5,8 +5,8 @@ class Shelter extends Product{
     public $size;
     public $assurance;
 
-    public function __construct($name, $animal, $cost, $img_url, $material, $size){
-        parent::__construct($name, $animal, $cost, $img_url);
+    public function __construct($name, Category $category, $cost, $img_url, $material, $size){
+        parent::__construct($name, $category, $cost, $img_url);
         $this->material = $material;
         $this->size = $size;
         

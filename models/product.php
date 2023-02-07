@@ -10,9 +10,9 @@ class Product {
     public $sale = 0;
 
 
-    public function __construct($name, $animal, $cost, $img_url){
+    public function __construct($name, Category $category, $cost, $img_url){
         $this->name = $name;
-        $this->animal = $animal;
+        $this->category = $category;
         $this->cost = $cost;
         $this->img_url = $img_url;
     }
